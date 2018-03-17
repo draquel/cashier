@@ -458,6 +458,7 @@ trait Billable
         } elseif ($card instanceof StripeBankAccount) {
             $this->card_brand = 'Bank Account';
             $this->card_last_four = $card->last4;
+            $this->zip_code = $card->address_zip;
         }
 
         return $this;
